@@ -1,0 +1,10 @@
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.csprojAssemblyReference.cache
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.Form1.resources
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.Properties.Resources.resources
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.csproj.GenerateResource.cache
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\HachickoProductive\bin\Debug\HachickoProductive.exe.config
+C:\Users\Acer\source\repos\HachickoProductive\bin\Debug\HachickoProductive.exe
+C:\Users\Acer\source\repos\HachickoProductive\bin\Debug\HachickoProductive.pdb
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.exe
+C:\Users\Acer\source\repos\HachickoProductive\obj\Debug\HachickoProductive.pdb
