@@ -26,6 +26,8 @@ namespace HachickoProductive
             {
                 LoadingProgress.Value = 0;
                 timer1.Stop();
+                Home hom = new Home();
+                hom.Show();
                 this.Hide();
             }
         }
