@@ -25,8 +25,8 @@ namespace HachickoProductive
 
         private void YourAssignmentlbl_Paint(object sender, PaintEventArgs e)
         {
-           // YourAssignment yourAssignment = new YourAssignment();
-           // yourAssignment.ShowDialog();
+           YourAssignment yourAssignment = new YourAssignment();
+           yourAssignment.ShowDialog();
         }
     }
 }
