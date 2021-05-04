@@ -28,5 +28,11 @@ namespace HachickoProductive
            YourAssignment yourAssignment = new YourAssignment();
            yourAssignment.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            YourAssignment yourAssignment = new YourAssignment();
+            yourAssignment.ShowDialog();
+        }
     }
 }

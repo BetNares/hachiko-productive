@@ -29,6 +29,7 @@ namespace HachickoProductive
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YourAssignment));
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -66,6 +67,15 @@ namespace HachickoProductive
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.database1DataSet = new HachickoProductive.Database1DataSet();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new HachickoProductive.Database1DataSetTableAdapters.TableTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaTugasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matkulDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deadlineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -90,6 +100,9 @@ namespace HachickoProductive
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -374,6 +387,7 @@ namespace HachickoProductive
             this.label10.Size = new System.Drawing.Size(52, 19);
             this.label10.TabIndex = 0;
             this.label10.Text = "Home";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // panel11
             // 
@@ -486,12 +500,73 @@ namespace HachickoProductive
             this.panel8.Size = new System.Drawing.Size(214, 442);
             this.panel8.TabIndex = 2;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.namaTugasDataGridViewTextBoxColumn,
+            this.matkulDataGridViewTextBoxColumn,
+            this.deadlineDataGridViewTextBoxColumn,
+            this.deskripsiDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(241, 113);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(545, 228);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.database1DataSet;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // namaTugasDataGridViewTextBoxColumn
+            // 
+            this.namaTugasDataGridViewTextBoxColumn.DataPropertyName = "Nama_Tugas";
+            this.namaTugasDataGridViewTextBoxColumn.HeaderText = "Nama_Tugas";
+            this.namaTugasDataGridViewTextBoxColumn.Name = "namaTugasDataGridViewTextBoxColumn";
+            // 
+            // matkulDataGridViewTextBoxColumn
+            // 
+            this.matkulDataGridViewTextBoxColumn.DataPropertyName = "Matkul";
+            this.matkulDataGridViewTextBoxColumn.HeaderText = "Matkul";
+            this.matkulDataGridViewTextBoxColumn.Name = "matkulDataGridViewTextBoxColumn";
+            // 
+            // deadlineDataGridViewTextBoxColumn
+            // 
+            this.deadlineDataGridViewTextBoxColumn.DataPropertyName = "Deadline";
+            this.deadlineDataGridViewTextBoxColumn.HeaderText = "Deadline";
+            this.deadlineDataGridViewTextBoxColumn.Name = "deadlineDataGridViewTextBoxColumn";
+            // 
+            // deskripsiDataGridViewTextBoxColumn
+            // 
+            this.deskripsiDataGridViewTextBoxColumn.DataPropertyName = "Deskripsi";
+            this.deskripsiDataGridViewTextBoxColumn.HeaderText = "Deskripsi";
+            this.deskripsiDataGridViewTextBoxColumn.Name = "deskripsiDataGridViewTextBoxColumn";
+            // 
             // YourAssignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(638, 438);
+            this.ClientSize = new System.Drawing.Size(801, 438);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -500,6 +575,7 @@ namespace HachickoProductive
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "YourAssignment";
             this.Text = "Your Assignment";
+            this.Load += new System.EventHandler(this.YourAssignment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
@@ -536,6 +612,9 @@ namespace HachickoProductive
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -578,5 +657,14 @@ namespace HachickoProductive
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private Database1DataSetTableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaTugasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matkulDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deadlineDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn deskripsiDataGridViewTextBoxColumn;
     }
 }

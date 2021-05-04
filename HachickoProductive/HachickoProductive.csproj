@@ -72,6 +72,11 @@
   <ItemGroup>
     <Compile Include="Assignment.cs" />
     <Compile Include="AssignmentModel.cs" />
+    <Compile Include="Database1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InputAssignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +144,17 @@
     <EmbeddedResource Include="YourAssignment.resx">
       <DependentUpon>YourAssignment.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Database1DataSet.xsc">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet.xss">
+      <DependentUpon>Database1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
