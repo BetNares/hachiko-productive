@@ -5,3 +5,8 @@ Class diagram:
 <img
 src= ./classdiagram.png
 />
+
+Database diagram:
+<img
+src= ./BasisDataHachiko.png
+/>
