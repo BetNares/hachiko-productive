@@ -36,11 +36,11 @@ namespace HachickoProductive
             this.label4 = new System.Windows.Forms.Label();
             this.NamaTb = new System.Windows.Forms.TextBox();
             this.MatKulTb = new System.Windows.Forms.TextBox();
-            this.DeadlineTb = new System.Windows.Forms.TextBox();
             this.DeskripsiTb = new System.Windows.Forms.TextBox();
-            this.SaveBtn = new System.Windows.Forms.Button();
+            this.ActionBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@ namespace HachickoProductive
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 53);
+            this.label1.Location = new System.Drawing.Point(105, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 28);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace HachickoProductive
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 163);
+            this.label2.Location = new System.Drawing.Point(142, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 28);
             this.label2.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace HachickoProductive
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(139, 218);
+            this.label4.Location = new System.Drawing.Point(139, 228);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 28);
             this.label4.TabIndex = 3;
@@ -91,7 +91,7 @@ namespace HachickoProductive
             // NamaTb
             // 
             this.NamaTb.BackColor = System.Drawing.Color.NavajoWhite;
-            this.NamaTb.Location = new System.Drawing.Point(268, 56);
+            this.NamaTb.Location = new System.Drawing.Point(268, 55);
             this.NamaTb.Name = "NamaTb";
             this.NamaTb.Size = new System.Drawing.Size(313, 26);
             this.NamaTb.TabIndex = 4;
@@ -104,53 +104,59 @@ namespace HachickoProductive
             this.MatKulTb.Size = new System.Drawing.Size(313, 26);
             this.MatKulTb.TabIndex = 5;
             // 
-            // DeadlineTb
-            // 
-            this.DeadlineTb.BackColor = System.Drawing.Color.NavajoWhite;
-            this.DeadlineTb.Location = new System.Drawing.Point(268, 166);
-            this.DeadlineTb.Name = "DeadlineTb";
-            this.DeadlineTb.Size = new System.Drawing.Size(313, 26);
-            this.DeadlineTb.TabIndex = 6;
-            // 
             // DeskripsiTb
             // 
             this.DeskripsiTb.BackColor = System.Drawing.Color.NavajoWhite;
-            this.DeskripsiTb.Location = new System.Drawing.Point(268, 221);
+            this.DeskripsiTb.Location = new System.Drawing.Point(269, 231);
             this.DeskripsiTb.Multiline = true;
             this.DeskripsiTb.Name = "DeskripsiTb";
-            this.DeskripsiTb.Size = new System.Drawing.Size(313, 78);
+            this.DeskripsiTb.Size = new System.Drawing.Size(313, 136);
             this.DeskripsiTb.TabIndex = 7;
             // 
-            // SaveBtn
+            // ActionBtn
             // 
-            this.SaveBtn.BackColor = System.Drawing.Color.SandyBrown;
-            this.SaveBtn.Location = new System.Drawing.Point(382, 328);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(147, 34);
-            this.SaveBtn.TabIndex = 8;
-            this.SaveBtn.Text = "Save Changes";
-            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.ActionBtn.BackColor = System.Drawing.Color.SandyBrown;
+            this.ActionBtn.Location = new System.Drawing.Point(396, 494);
+            this.ActionBtn.Name = "ActionBtn";
+            this.ActionBtn.Size = new System.Drawing.Size(147, 34);
+            this.ActionBtn.TabIndex = 8;
+            this.ActionBtn.Text = "Add";
+            this.ActionBtn.UseVisualStyleBackColor = false;
+            this.ActionBtn.Click += new System.EventHandler(this.ActionBtn_Click);
             // 
             // CancelBtn
             // 
             this.CancelBtn.BackColor = System.Drawing.Color.SandyBrown;
-            this.CancelBtn.Location = new System.Drawing.Point(535, 328);
+            this.CancelBtn.Location = new System.Drawing.Point(549, 494);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(106, 34);
             this.CancelBtn.TabIndex = 9;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 266);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 432);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 113);
+            this.pictureBox1.Size = new System.Drawing.Size(124, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.NavajoWhite;
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.CustomFormat = "ddd, dd MMMM yyyy";
+            this.dateTimePicker1.Location = new System.Drawing.Point(268, 165);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(313, 26);
+            this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.Value = new System.DateTime(2021, 5, 22, 17, 35, 0, 0);
             // 
             // InputAssignment
             // 
@@ -158,12 +164,12 @@ namespace HachickoProductive
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(679, 384);
+            this.ClientSize = new System.Drawing.Size(680, 562);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.CancelBtn);
-            this.Controls.Add(this.SaveBtn);
+            this.Controls.Add(this.ActionBtn);
             this.Controls.Add(this.DeskripsiTb);
-            this.Controls.Add(this.DeadlineTb);
             this.Controls.Add(this.MatKulTb);
             this.Controls.Add(this.NamaTb);
             this.Controls.Add(this.label4);
@@ -187,10 +193,10 @@ namespace HachickoProductive
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox NamaTb;
         private System.Windows.Forms.TextBox MatKulTb;
-        private System.Windows.Forms.TextBox DeadlineTb;
         private System.Windows.Forms.TextBox DeskripsiTb;
-        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.Button ActionBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
