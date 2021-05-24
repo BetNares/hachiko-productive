@@ -23,10 +23,22 @@ namespace HachickoProductive
             AddForm.ShowDialog();
         }
 
-        private void YourAssignmentlbl_Paint(object sender, PaintEventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-           // YourAssignment yourAssignment = new YourAssignment();
-           // yourAssignment.ShowDialog();
+            YourAssignment yourAssignment = new YourAssignment();
+            yourAssignment.ShowDialog();
+        }
+
+        private void EditAssignmentBtn_Click(object sender, EventArgs e)
+        {
+            SearchEditForm searchEditForm = new SearchEditForm();
+            searchEditForm.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Calendar calendar = new Calendar();
+            calendar.ShowDialog();
         }
     }
 }

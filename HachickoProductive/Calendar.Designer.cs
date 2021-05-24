@@ -217,7 +217,7 @@ namespace HachickoProductive
             // 
             this.monthCalendar1.BackColor = System.Drawing.Color.Red;
             this.monthCalendar1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.monthCalendar1.Location = new System.Drawing.Point(496, 151);
+            this.monthCalendar1.Location = new System.Drawing.Point(461, 172);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 4;
             this.monthCalendar1.TitleBackColor = System.Drawing.SystemColors.AppWorkspace;
